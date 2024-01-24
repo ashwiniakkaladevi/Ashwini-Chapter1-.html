@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Chapter1</title>
+    </head>
+    <body>
+        <hr style="height: 2px; color: black; background-color: black;"><br><br>
+        <h2  class="a"><b>Chapter 1. Introduction to the NetView Management Console</b></h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="padding-left:15%;">The NetView management console of NetView for z/OS graphically displays the<br> resources that represent a network, a portion of a network, or a group of networks<br> at various levels of detail. These views show the network and systems resources<br> that you are monitoring. When you monitor a network, resource status changes are<br> reflected graphically in the views.<br></p>
+<hr style="height: 1px; color: black; background-color: black;">
+   <h3 class="b"><b>What You Can Do with NetView Management Console</b></h3>
+   <p style="padding-left:15%;">You can use the NetView management console to perform the following tasks:<br>
+    v    Monitor and control large portions of complex business systems.<br>
+    v    View the topology and connectivity of your network graphically.<br>
+    v Monitor the overall state of a network or a portion of a network through<br> aggregates, which represent the combined status of a group of related<br> applications and resources.<br>
+    v Navigate easily from an aggregate to a real resource that is failing.<br>
+    v Mark resources for your own purposes; for example, to show that they are being serviced.<br>
+    v Display a list of events or status changes received for a selected resource.<br>
+    v Issue predefined commands from context menus, or issue your own commands.<br>
+    v Stop and restart selected resources.<br>
+    v Monitor and manage multiple NetView programs.<br>
+    v Cycle through open views automatically, at intervals.<br>
+    v Build custom view and aggregate resource collections.<br>
+    v Monitor resources by exception, to show on the screen only when the resources<br> need the attention of the operator.<br>
+    v Mark resources for your own purposes; for example, to show that they are being<br> serviced.
+    
+    NetView management console provides the added capability to create<br> demonstrations from your live NetView management console views. These<br> demonstrations can be used to aid in a variety of activities including:<br>
+    v Operator training within your corporate setting<br>
+    v Showing your customers what you can offer them<br>
+    v NetView management console advocacy<br>
+    You can create these demonstrations by capturing live NetView management<br> console views and integrating them into the demonstration. This makes your<br> demonstrations look and feel like your real NetView management console system.<br> For complete information about creating demonstrations, see Appendix C,<br> “Creating a Demonstration,” on page 127.<br>
+    </p>
+    <hr style="height: 1px; color: black; background-color: black;"><br>
+    <h3 class="b"><b>How the NetView Management Console Works</b></h3>
+    <p style="padding-left:15%;">The NetView management console consists of a server and a Java-based console,<br> which are generically referred to in this book and the online help as the <i>topology</i><br> <i>server</i> and <i>topology console.</i><br></p>
+    <hr><hr>
+    <p style="padding-left:15%;">The topology console graphically displays systems and networking information<br> provided by Tivoli NetView for z/OS. This information is displayed as Resource<br> Object Data Manager (RODM) based views and is only available if a conversation<br> is set up between the topology server and the NetView host. See Chapter 7,<br> “Operating the NetView Management Console,” on page 53 for information about<br> setting up this conversation using the NETCONV command.<br></p>
+   
+    <h3 class="b"><b>Topology Server</b></h3>
+<p style="padding-left:15%;">The topology server interacts with Graphic Monitor Facility host subsystem<br> (GMFHS) and RODM and provides information for display on the topology<br>  console.<br> <br> 
+
+The topology server furnishes the topology console with a set of tasks that are<br>  applicable for a resource. These tasks are shown in context-sensitive menus on the<br>  topology console.<br> <br> 
+
+The topology server also stores files on behalf of the topology console, including <br> icons, backgrounds, help files, log files, customized views, and settings.<br> 
+
+Note that you must have a conversation between the topology server and<br>  the NetView host set up using the NETCONV command. See Chapter 7, “Operating<br>  the NetView Management Console,” on page 53 for information about setting up<br>  communications with the NetView host.<br> </p>
+
+<h3 class="b"><b>Topology Console</b></h3>
+<p style="padding-left:15%;">The topology console graphically displays network information from the topology<br>  server. It displays systems and networking views. It uses color to indicate the<br>  status of each resource, and the status of the entire network. As the topology<br>  server receives configuration and status updates about the network, it updates the<br>  topology console. This enables the topology console to always display the real-time<br>  configuration of the network.<br> </p>
+<h3 class="b"><b>Real and Aggregate Resources</b></h3>
+<p style="padding-left:15%;">The topology console can display both real and aggregate resources. A real resource<br> is a single component or link (connection) in a network. An aggregate<br> resource represents a collection of real or aggregate resources. When displayed on<br> the topology console, the icon for an aggregate resource or an aggregate link has a<br> plus (+) sign. The status of an aggregate resource is a reflection of the status of its<br> underlying real resources. When you monitor an aggregate resource, you are<br> monitoring the overall status of a portion of the network.<br>
+
+You can define real resources as critical and noncritical using aggregation priority.<br> Critical resources are resources that are considered important to the operation of<br> the network and are assigned a high aggregation priority (1 or greater). If the<br> status of a critical resource changes to unsatisfactory, for example, the status of the<br> aggregate resource also changes to degraded. Noncritical resources have low<br> aggregation priorities (0).<br>
+
+You can set the aggregation priority on a resource from the Resource Properties<br> notebook for a selected resource.<br>
+
+When a real resource changes status, the status of an aggregate of which the<br> resource is a part is determined in the following way:<br></p>
+<hr><hr>
+<p style="padding-left:15%;">v The status of the parent aggregate of the resource is determined by the statuses<br> of the real resource and its siblings.<br>
+    v The status of the grandparent aggregate of the resource is determined by the<br> statuses of the real resources under the parent.<br>
+    <hr><hr>
+
+    </p>
+
+    <h2 class="a"><b>Part 2. Installing and Customizing the NetView Management Console</b></h3>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><hr><hr><br> <br>
+</body>
+<style>
+    
+.a{
+    font-weight: 500;
+    padding-left:10%;
+}
+.body{
+    text-align: justify;
+    padding-left:35%;
+    padding-right:30%;
+}
+.b{
+    padding-left: 10%;
+}
+</style>
+</html>
